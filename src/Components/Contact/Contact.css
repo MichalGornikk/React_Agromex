@@ -1,0 +1,45 @@
+.box-contact {
+  width: 100%;
+  height: 170px;
+}
+
+.box-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d32a24;
+}
+
+.text-container {
+  font-size: 10px;
+  flex: 1;
+  padding: 200px;
+  color: rgb(255, 255, 255);
+}
+
+.button-container {
+  display: flex;
+  flex-shrink: 0;
+  padding-right: 350px;
+  color: rgb(255, 255, 255);
+}
+
+.contact-button,
+.offer-button {
+  border: 1px solid #ffffff;
+  border-radius: 10%;
+  background-color: transparent;
+  padding: 10px 40px;
+  margin: 0 50px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ffffff; /* Ustawia kolor tekstu na biały */
+}
+
+.contact-button:hover,
+.offer-button:hover {
+  background-color: #ddd;
+  color: #d32a24; /* Text color on hover (red) */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* Dodaje cień */
+}

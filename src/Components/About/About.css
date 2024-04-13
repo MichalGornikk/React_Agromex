@@ -1,0 +1,30 @@
+.grid {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+}
+
+.line img {
+  max-width: 100%;
+  height: auto;
+  order: 1;
+}
+
+.line .text {
+  order: 2;
+}
+
+.line:nth-child(even) .text {
+  order: 1;
+}
+
+.line:nth-child(even) img {
+  order: 2;
+}

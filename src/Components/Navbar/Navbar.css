@@ -1,0 +1,132 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* display: flex;
+  align-items: center; */
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.966);
+  display: grid;
+  grid-template-columns: 10fr 10fr auto 60fr;
+}
+
+.logo {
+  height: 50px;
+  /* padding-left: 10%; */
+}
+
+nav ul {
+  /* display: absolute;
+  right: 10; */
+  font-size: 2px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 50px;
+  font-size: 16px;
+}
+
+.dark-nav {
+  background-image: linear-gradient(to bottom, #5a5a5a88, #585858b0, #2b2b2b8f);
+  transition: 0.5s;
+}
+
+.nav-button {
+  position: relative; /* Needed for dropdown menu positioning */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  border-width: 0 5px 5px 0;
+  border-color: transparent transparent rgb(0, 0, 0) transparent;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Positions the menu below the button */
+  left: 0px;
+  width: 100%; /* Fills the width of the button */
+  background-color: #f7f5f5;
+  display: none;
+  z-index: 10;
+  border-radius: 0px 0px 5% 5%;
+}
+
+.nav-button:hover .dropdown-menu {
+  display: block; /* Shows the dropdown menu on hover */
+}
+
+.dropdown-menu li {
+  padding: 7px;
+  width: 50%;
+  align-items: center;
+  border-bottom: 2px solid #202020d2;
+}
+.dropdown-menu li a:hover {
+  color: #739417;
+}
+.dropdown-menu li a {
+  color: #000000;
+  text-decoration: none;
+}
+.down-arrow {
+  /* Existing styles ... */
+  width: 16px; /* Set desired width */
+  height: 18px; /* Set desired height */
+}
+.nav-button:hover {
+  color: #739417;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* media query  */
+
+@media (max-width: 1743px) {
+  .logo {
+    width: 100px;
+  }
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+@media (max-width: 840px) {
+  nav {
+    padding: 15px 0;
+  }
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    bottom: 120px;
+    background-color: #006863a1;
+    z-index: -1;
+    width: 200px;
+    padding-top: 70px;
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px 40px;
+  }
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+  .hide-mobile-menu {
+    right: -200px;
+  }
+}

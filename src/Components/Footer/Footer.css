@@ -1,0 +1,126 @@
+.footer-padding {
+  padding: 1rem 4rem;
+}
+
+.footer-box {
+  background-color: rgb(255, 255, 255);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.footer-links-div {
+  width: 150ox;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: rgb(12, 12, 12);
+}
+
+.footer-box a:hover {
+  color: rgba(255, 0, 0, 0.705);
+  text-decoration: none;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+}
+.socialmedia img {
+  width: 80%;
+}
+
+.footer-links-div h4 {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0.9rem;
+}
+.footer-links-div p {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+/* --- MEDIA-QUERY --- */
+
+@media screen and (max-width: 850px) {
+  .footer-heding h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer-heding h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .footer-links div {
+    margin: 1rem 0;
+  }
+
+  .footer-btn p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .footer-below {
+    flex-direction: column;
+    justify-content: left;
+  }
+  .footer-below-links {
+    flex-direction: column;
+  }
+  .footer-below-links {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-widht: 550px) {
+  .footer-heding h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .footer-links div {
+    margin: 1rem 0;
+  }
+  .footer-btn {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .footer-belowP {
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .footer-below-links {
+    flex-direction: column;
+  }
+  .footer-below-links {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-heding h1 {
+    font-size: 27px;
+    line-height: 38px;
+  }
+}
