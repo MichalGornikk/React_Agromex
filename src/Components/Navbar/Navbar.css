@@ -5,14 +5,16 @@ nav {
   left: 0;
   /* display: flex;
   align-items: center; */
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.966);
+  z-index: 5;
+  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 10fr 10fr auto 60fr;
+  height: 80px;
 }
 
 .logo {
-  height: 50px;
+  height: 70px;
+
   /* padding-left: 10%; */
 }
 
@@ -30,10 +32,24 @@ nav ul li {
   margin: 0px 50px;
   font-size: 16px;
 }
+&:last-child {
+  border-right: none;
+}
+
+&::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; /* Wysokość linii */
+  width: 1px; /* Szerokość linii */
+  background-color: #ddd; /* Kolor linii */
+}
 
 .dark-nav {
-  background-image: linear-gradient(to bottom, #5a5a5a88, #585858b0, #2b2b2b8f);
+  background-color: #ffffff;
   transition: 0.5s;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .nav-button {
@@ -48,7 +64,7 @@ nav ul li {
   right: 100px;
   transform: translateY(-50%);
   border-width: 0 5px 5px 0;
-  border-color: transparent transparent rgb(0, 0, 0) transparent;
+  border-color: transparent transparent rgb(253, 253, 253) transparent;
 }
 
 .dropdown-menu {
@@ -56,7 +72,7 @@ nav ul li {
   top: 100%; /* Positions the menu below the button */
   left: 0px;
   width: auto; /* Fills the width of the button */
-  background-color: #f7f5f5;
+  background-color: #ffffff;
   display: none;
   z-index: 10;
   border-radius: 0px 0px 5% 5%;
@@ -76,7 +92,7 @@ nav ul li {
   border-bottom: 2px solid #202020d2;
 }
 .dropdown-menu li a:hover {
-  color: #739417;
+  color: #ff0000;
 }
 .dropdown-menu li a {
   color: #000000;
@@ -88,7 +104,7 @@ nav ul li {
   height: 18px; /* Set desired height */
 }
 .nav-button:hover {
-  color: #739417;
+  color: #4c00ff;
 }
 
 .menu-icon {
@@ -114,7 +130,7 @@ nav ul li {
     top: 0;
     right: 0px;
     bottom: 120px;
-    background-color: #006863a1;
+    background-color: #ffffffa1;
     z-index: -1;
     width: 200px;
     padding-top: 70px;

@@ -17,8 +17,8 @@
 
 .slide-track {
   display: flex;
-  width: calc(250px * 7);
-  animation: scrolling 50s linear infinite; /* Poprawiona nazwa animacji i czas */
+  width: calc(350px * 7);
+  animation: scrolling 10s linear infinite; /* Dostosowany czas animacji */
 }
 
 @keyframes scrolling {
@@ -28,13 +28,12 @@
   100% {
     transform: translateX(calc(-250px * 7));
   }
-  /* Wstaw pierwsze zdjęcie na koniec po osiągnięciu ostatniego zdjęcia */
-  100% {
-    transform: translateX(
-      calc(-250px * 6)
-    ); /* Przesuń o szerokość 6 zdjęć, aby pojawiło się pierwsze zdjęcie */
+  /* Przejście do pierwszego slajdu po osiągnięciu ostatniego zduplikowanego */
+  100.01% {
+    transform: translateX(0);
   }
 }
+
 .slide {
   height: 250px;
   width: 250px;
@@ -42,12 +41,13 @@
   align-items: center;
   padding: 15px;
 }
-.slide > .about-img {
+
+.slide > .slider-img {
   width: 90%;
-  transition: transform 1s; /* Poprawione: czas przejścia w sekundach */
+  transition: transform 1s; /* Dostosowany czas przejścia w sekundach */
 }
 
-.slide > .about-img:hover {
+.slide > .slider-img:hover {
   transform: scale(1.1); /* Powiększenie obrazka po najechaniu kursorem */
 }
 
@@ -68,9 +68,4 @@
 .slider::before {
   left: 0;
   top: 0;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
 }
