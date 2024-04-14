@@ -35,6 +35,51 @@
   margin-left: 30px; /* Dodaj odstęp z lewej strony */
   margin-right: 30px; /* Dodaj odstęp z lewej strony */
   position: relative; /* Ustaw pozycję względną */
+  overflow: hidden; /* Ukryj elementy, które wystają poza kontener */
+}
+
+.line .text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Dodaj gradient */
+  transition: background-color 0.3s ease; /* Dodaj animację przejścia */
+  z-index: 2; /* Ustaw wyższy index warstwy */
+}
+
+.line .text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Dodaj gradient */
+  transition: background-color 0.3s ease; /* Dodaj animację przejścia */
+  z-index: 2; /* Ustaw wyższy index warstwy */
+}
+
+.line .text:hover::before,
+.line .text:hover::after {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Zwiększ jasność gradientu po najechaniu */
 }
 
 .line .text::before,
@@ -97,7 +142,7 @@
 }
 
 .btn-about:hover {
-  background-color: #e70000; /* Zmniejsz jasność koloru tła */
-  color: #ffffff;
-  box-shadow: 0 0 10px rgb(255, 255, 255); /* Dodaj lekki cień po najechaniu */
+  background-color: #cc0000; /* Zmniejsz jasność koloru tła */
+  color: #000000;
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Dodaj lekki cień po najechaniu */
 }

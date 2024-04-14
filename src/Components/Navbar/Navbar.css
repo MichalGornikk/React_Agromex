@@ -3,8 +3,6 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  /* display: flex;
-  align-items: center; */
   z-index: 5;
   background-color: rgb(255, 255, 255);
   display: grid;
@@ -14,13 +12,9 @@ nav {
 
 .logo {
   height: 70px;
-
-  /* padding-left: 10%; */
 }
 
 nav ul {
-  /* display: absolute;
-  right: 10; */
   font-size: 2px;
   display: flex;
   align-items: center;
@@ -31,7 +25,21 @@ nav ul li {
   list-style: none;
   margin: 0px 50px;
   font-size: 16px;
+  position: relative;
+  cursor: pointer;
 }
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  bottom: 10px; /* Ustawienie linii na wysokości środka navbaru */
+  left: 0;
+  width: 0; /* Początkowa szerokość linii */
+  height: 2px;
+  background-color: transparent;
+  transition: width 3s ease, background-color 1s ease; /* Dodane płynne przejście */
+}
+
 &:last-child {
   border-right: none;
 }
@@ -41,9 +49,9 @@ nav ul li {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; /* Wysokość linii */
-  width: 1px; /* Szerokość linii */
-  background-color: #ddd; /* Kolor linii */
+  height: 100%;
+  width: 1px;
+  background-color: #ddd;
 }
 
 .dark-nav {
@@ -53,25 +61,31 @@ nav ul li {
 }
 
 .nav-button {
-  position: relative; /* Needed for dropdown menu positioning */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  position: relative;
+  cursor: pointer;
 }
 
 .nav-button::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: 100px;
-  transform: translateY(-50%);
-  border-width: 0 5px 5px 0;
-  border-color: transparent transparent rgb(253, 253, 253) transparent;
+  top: 100%;
+  left: 0;
+  width: 0; /* Początkowa szerokość linii */
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.5s ease; /* Dodane płynne przejście */
+}
+
+.nav-button:hover::after {
+  width: 100%; /* Szerokość linii po najechaniu */
+  background-color: #ff0000;
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Positions the menu below the button */
+  top: 100%;
   left: 0px;
-  width: auto; /* Fills the width of the button */
+  width: auto;
   background-color: #ffffff;
   display: none;
   z-index: 10;
@@ -79,39 +93,41 @@ nav ul li {
 }
 
 .nav-button:hover .dropdown-menu {
-  display: block; /* Shows the dropdown menu on hover */
+  display: block;
 }
 
 .dropdown-menu li:last-child {
   border-bottom: none;
 }
+
 .dropdown-menu li {
   padding: 7px;
   width: 50%;
   align-items: center;
   border-bottom: 2px solid #202020d2;
 }
+
 .dropdown-menu li a:hover {
   color: #ff0000;
 }
+
 .dropdown-menu li a {
   color: #000000;
   text-decoration: none;
 }
+
 .down-arrow {
-  /* Existing styles ... */
-  width: 16px; /* Set desired width */
-  height: 18px; /* Set desired height */
+  width: 16px;
+  height: 18px;
 }
+
 .nav-button:hover {
-  color: #4c00ff;
+  color: #ff0000;
 }
 
 .menu-icon {
   display: none;
 }
-
-/* media query  */
 
 @media (max-width: 1743px) {
   .logo {
@@ -121,6 +137,7 @@ nav ul li {
     margin: 10px 15px;
   }
 }
+
 @media (max-width: 840px) {
   nav {
     padding: 15px 0;
