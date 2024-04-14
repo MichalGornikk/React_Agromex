@@ -1,56 +1,40 @@
-import { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Photos.css";
 
-const Photos = () => {
-  const imageSrc1 = "images/BMW.jpeg";
-  const imageSrc2 = "images/about.jpg";
-  const imageSrc3 = "images/about.jpg";
-  const imageSrc4 = "images/about.jpg";
-  const imageSrc5 = "images/about.jpg";
-  const imageSrc6 = "images/about.jpg";
-  const imageSrc7 = "images/about.jpg";
+const slides = [
+  "images/tir.jpg",
+  "images/tir.jpg",
+  "images/tir.jpg",
+  "images/tir.jpg",
+  "images/tir.jpg",
 
-  const slideImages = [
-    imageSrc1,
-    imageSrc2,
-    imageSrc3,
-    imageSrc4,
-    imageSrc5,
-    imageSrc6,
-    imageSrc7,
-  ];
+  // Dodaj więcej zdjęć tutaj
+];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === slideImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [slideImages.length, currentIndex]); // Dodaj currentIndex do zależności
-
-  // Ustaw tytuł strony na podstawie bieżącego slajdu
-  useEffect(() => {
-    document.title = `Slide ${currentIndex + 1}`;
-  }, [currentIndex]);
+const SimpleSlider = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
 
   return (
-    <div className="slider-box">
-      <div className="slider">
-        <div className="slide-track">
-          {/* Mapowanie tablicy slideImages */}
-          {slideImages.map((image, index) => (
-            <div className="slide" key={index}>
-              <img src={image} alt="" className="slider-img" />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="slider-container">
+      <Slider {...settings}>
+        {slides.map((slide, index) => (
+          <div key={index}>
+            <img src={slide} alt={`Slide ${index}`} />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
 
-export default Photos;
+export default SimpleSlider;

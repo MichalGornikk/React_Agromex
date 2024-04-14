@@ -1,71 +1,100 @@
-.slider-box {
-  min-height: 40vh;
-  display: grid;
-  place-items: center;
-  width: 100%;
+.slider-container {
+  padding: 50px 0px 100px 0px;
 }
 
-.slider {
-  height: 250px;
-  margin: auto;
+.slider-wrapper {
   position: relative;
-  width: 90%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
 }
 
-.slide-track {
-  display: flex;
-  width: calc(350px * 7);
-  animation: scrolling 10s linear infinite; /* Dostosowany czas animacji */
+.slick-slide {
+  position: relative;
 }
 
-@keyframes scrolling {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
-  /* Przejście do pierwszego slajdu po osiągnięciu ostatniego zduplikowanego */
-  100.01% {
-    transform: translateX(0);
-  }
+.slick-slide img {
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
 
-.slide {
-  height: 250px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-}
-
-.slide > .slider-img {
-  width: 90%;
-  transition: transform 1s; /* Dostosowany czas przejścia w sekundach */
-}
-
-.slide > .slider-img:hover {
-  transform: scale(1.1); /* Powiększenie obrazka po najechaniu kursorem */
-}
-
-.slider::before,
-.slider::after {
-  background: linear-gradient(
-    to right,
-    rgba(250, 250, 250, 250) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  content: "";
-  height: 100%;
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
   position: absolute;
-  width: 15%;
-  z-index: 2;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  transform: translate(0, -50%);
+  z-index: 1;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
-.slider::before {
-  left: 0;
-  top: 0;
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #ff0000; /* Kolor strzałek */
+}
+
+.slick-prev:before {
+  content: "❮";
+}
+
+.slick-next:before {
+  content: "❯";
+}
+
+/* Style dla slick dots */
+.slick-dots {
+  position: absolute;
+  bottom: 20px; /* Opuść kropki nieco w dół */
+  width: 100%;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 12px; /* Zmniejsz szerokość kropki */
+  height: 12px; /* Zmniejsz wysokość kropki */
+  border: none;
+  background-color: transparent; /* Usuwamy kolor tła */
+  opacity: 0.75;
+  cursor: pointer;
+  outline: none;
+}
+
+.slick-dots li button::before {
+  content: ""; /* Dodajemy puste zawartości dla pseudoelementu */
+  display: block;
+  width: 12px; /* Ustawiamy szerokość na taką samą jak wysokość */
+  height: 12px; /* Ustawiamy wysokość */
+  background-color: #ffffff; /* Kolor kwadratu */
+  border-radius: 2px; /* Zaokrąglamy narożniki, jeśli chcemy */
+}
+
+.slick-dots li.slick-active button::before {
+  background-color: #ff0000; /* Kolor aktywnej kropki */
 }

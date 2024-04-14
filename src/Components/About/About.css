@@ -12,13 +12,56 @@
 }
 
 .line img {
-  max-width: 100%;
+  width: 100%; /* Dopasuj szerokość obrazka do ramki */
   height: auto;
   order: 1;
+  border: 2px solid #ddd; /* Dodaj ramkę wokół obrazu */
+  transition: transform 0.3s ease; /* Dodaj efekt przejścia */
+}
+
+.line img:hover {
+  transform: scale(1.05); /* Powiększ obraz o 5% po najechaniu */
 }
 
 .line .text {
   order: 2;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin-top: 20px; /* Dodaj odstęp na górze */
+  display: flex; /* Użyj flexbox */
+  flex-direction: column; /* Ustaw kierunek flexbox na kolumnę */
+  align-items: center; /* Wyśrodkuj elementy w pionie */
+  border: 2px solid #ddd; /* Dodaj ramkę wokół tekstu */
+  margin-left: 30px; /* Dodaj odstęp z lewej strony */
+  margin-right: 30px; /* Dodaj odstęp z lewej strony */
+  position: relative; /* Ustaw pozycję względną */
+}
+
+.line .text::before,
+.line .text::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(0, 0, 0, 0); /* Początkowo transparentne tło */
+  transition: background-color 0.3s ease; /* Dodaj animację przejścia */
+}
+
+.line .text::before {
+  border-top: 2px solid #ddd; /* Górna krawędź */
+  border-left: 2px solid #ddd; /* Lewa krawędź */
+}
+
+.line .text::after {
+  border-bottom: 2px solid #ddd; /* Dolna krawędź */
+  border-right: 2px solid #ddd; /* Prawa krawędź */
+}
+
+.line .text:hover::before,
+.line .text:hover::after {
+  background-color: rgba(0, 0, 0, 0.1); /* Podświetlenie po najechaniu */
 }
 
 .line:nth-child(even) .text {
@@ -27,4 +70,34 @@
 
 .line:nth-child(even) img {
   order: 2;
+}
+
+.text {
+  margin-left: 20px;
+}
+
+.text h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.btn-about {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Dodaj przejście */
+  margin-top: 10px; /* Dodaj odstęp na górze przycisku */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dodaj lekki cień */
+  position: relative; /* Ustaw pozycję przycisku na względną */
+  z-index: 1; /* Ustaw wyższy index warstwy dla przycisku */
+}
+
+.btn-about:hover {
+  background-color: #e70000; /* Zmniejsz jasność koloru tła */
+  color: #ffffff;
+  box-shadow: 0 0 10px rgb(255, 255, 255); /* Dodaj lekki cień po najechaniu */
 }

@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <ul className="grid">
         <li className="line">
-          <img src="images/BMW.jpeg" alt="Image 1 Description" />{" "}
+          <img src="images/about.jpg" alt="Image 1 Description" />{" "}
           {/* Update with your image source and alt text */}
           <div className="text">
             <h3>CENTRUM LOGISTYCZNE I USŁUGI SPEDYCYJNE</h3>
