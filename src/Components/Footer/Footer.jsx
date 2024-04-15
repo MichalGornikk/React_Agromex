@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="footer-section footer-padding">
         <div className="footer-links">
           <div className="footer-links-div">
-            <h4>For Bussnes</h4>
+            <h4>Dla Firm</h4>
             <a href="#">
-              <p>AKTUALNOŚĆI</p>
+              <p>Home</p>
             </a>
             <a href="#">
               <p>TRANSPORT I SPEDYCJA</p>
@@ -22,31 +22,26 @@ const Footer = () => {
             </a>
           </div>
           <div className="footer-links-div">
-            <h4>Resources</h4>
+            <h4>Produkcja</h4>
             <a href="#">
-              <p>ZLECENIA DLA FIRM</p>
+              <p>Maszyny Rolnicze</p>
             </a>
             <a href="#">
-              <p>ZLECENIA DLA FIRM</p>
+              <p>Konstrukcje Stalowe</p>
             </a>
             <a href="#">
-              <p>ZLECENIA DLA FIRM</p>
-            </a>
-          </div>
-          <div className="footer-links-div">
-            <h4>PARTNERZY</h4>
-            <a href="#">
-              <p>PARTNERZY</p>
+              <p>Inne</p>
             </a>
           </div>
+
           <div className="footer-links-div">
             <h4>Kontakt</h4>
             <a href="#">
-              <p>Telefon</p>
+              <p>Numer Kontaktowy</p>
             </a>
             <h5>500 500 500</h5>
             <a href="#">
-              <p>Telefon</p>
+              <p>Numer Kontaktowy</p>
             </a>
             <h5>500 500 500</h5>
           </div>

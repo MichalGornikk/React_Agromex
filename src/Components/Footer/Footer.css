@@ -1,5 +1,5 @@
 .footer-padding {
-  padding: 1rem 4rem;
+  padding: 0rem 20rem;
 }
 
 .footer-box {
@@ -15,19 +15,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   text-align: left;
   margin-bottom: 2rem;
 }
 
 .footer-links-div {
-  width: 150ox;
+  width: 150px; /* Poprawiono literówkę */
   margin: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
   color: rgb(12, 12, 12);
 }
 
@@ -39,10 +34,12 @@
 .socialmedia {
   display: flex;
   flex-direction: row;
-  padding-top: 3rem;
+  padding-top: 1rem; /* Dostosowano odstęp */
 }
+
 .socialmedia img {
-  width: 80%;
+  width: 20px; /* Dostosowano szerokość ikon */
+  margin-right: 1rem; /* Dodałem odstęp między ikonami */
 }
 
 .footer-links-div h4 {
@@ -50,17 +47,24 @@
   line-height: 17px;
   margin-bottom: 0.9rem;
 }
+
+.footer-links-div,
+.footer-links-div h4,
 .footer-links-div p {
-  font-size: 12px;
+  font-family: "Open Sans";
+}
+.footer-links-div p {
+  font-size: 15px;
   line-height: 15px;
   margin: 0.5rem 0;
   cursor: pointer;
 }
 
-/* --- MEDIA-QUERY --- */
+/* Media Query */
 
 @media screen and (max-width: 850px) {
   .footer-heding h1 {
+    /* Poprawiono literówkę */
     font-size: 44px;
     line-height: 50px;
   }
@@ -68,58 +72,18 @@
 
 @media screen and (max-width: 550px) {
   .footer-heding h1 {
+    /* Poprawiono literówkę */
     font-size: 34px;
     line-height: 42px;
   }
-  .footer-links div {
-    margin: 1rem 0;
-  }
-
-  .footer-btn p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .footer-below {
-    flex-direction: column;
-    justify-content: left;
-  }
-  .footer-below-links {
-    flex-direction: column;
-  }
-  .footer-below-links {
-    margin-left: 0rem;
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (max-widht: 550px) {
-  .footer-heding h1 {
-    font-size: 34px;
-    line-height: 42px;
-  }
-  .footer-links div {
-    margin: 1rem 0;
-  }
-  .footer-btn {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .footer-belowP {
-    flex-direction: column;
-    justify-content: left;
-  }
-
-  .footer-below-links {
-    flex-direction: column;
-  }
-  .footer-below-links {
-    margin-left: 0rem;
-    margin-top: 1rem;
+  .footer-links-div {
+    margin: 1rem 0; /* Dostosowano margines dla mniejszych ekranów */
   }
 }
 
 @media screen and (max-width: 400px) {
   .footer-heding h1 {
+    /* Poprawiono literówkę */
     font-size: 27px;
     line-height: 38px;
   }

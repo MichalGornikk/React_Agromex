@@ -26,7 +26,7 @@ const Navbar = () => {
       <div></div>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li className="nav-button">
-          <a href="#">AKTUALNOŚCI</a>
+          <a href="#">Home</a>
         </li>
         <li className="nav-button">
           <a href="#">O FIRMIE</a>

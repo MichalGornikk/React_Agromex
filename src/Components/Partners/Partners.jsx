@@ -21,10 +21,14 @@ function addAnimation() {
 
 const Partners = () => {
   const Part = [
-    { image: "images/about.jpg", alt: "Logo Agromex" },
-    { image: "images/about.jpg", alt: "Logo TEST" },
-    { image: "images/about.jpg", alt: "Logo Agromex" },
-    { image: "images/about.jpg", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
+    { image: "images/nestle.png", alt: "Logo TEST" },
   ];
   return (
     <div className="box-scroll">

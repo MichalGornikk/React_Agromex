@@ -1,0 +1,56 @@
+.order-box {
+  display: flex; /* Ustaw boxy w rzędzie */
+  justify-content: center; /* Wyśrodkowanie boxów */
+  gap: 15px; /* Odległość między boxami */
+  background-color: #f2f2f2; /* Lekko szare tło */
+  padding: 30px; /* Zwiększ margines wokół boxów, aby zapewnić miejsce na powiększony nagłówek */
+  flex-wrap: wrap; /* Złam boxy w wiersze, jeśli nie mieszczą się w jednym */
+}
+
+.box {
+  box-sizing: border-box; /* Wlicz marginesy i padding do szerokości boxa */
+  width: 360px; /* Zwiększ szerokość boxa o 20% */
+  height: 450px; /* Zwiększ wysokość boxa, aby pomieścić więcej tekstu */
+  border: 1px solid #ccc; /* Dodaj domyślną obwódkę */
+  padding: 15px; /* Margines wewnątrz boxa */
+  text-align: center; /* Wyśrodkowanie tekstu w boxie */
+  display: flex; /* Ustaw box obrazka jako flexbox */
+  flex-direction: column; /* Umieść elementy w pionie */
+  align-items: center; /* Wyśrodkowanie elementów w poziomie */
+  font-size: 15px; /* Dostosuj rozmiar czcionki */
+}
+
+.box h2 {
+  margin-top: 25px; /* Zwiększ margines górny nagłówka */
+  margin-bottom: 10px; /* Margines pod nagłówkiem */
+  overflow: hidden; /* Obetnij tekst, który wychodzi poza box */
+  white-space: nowrap; /* Zapobiegaj łamaniu linii w tekście */
+  text-overflow: ellipsis; /* Dodaj "..." do końca tekstu, jeśli wychodzi poza box */
+  white-space: nowrap;
+  padding-bottom: 15px;
+}
+
+.order-image {
+  width: 100%; /* Szerokość obrazka na 100% szerokości boxa */
+  height: 240px; /* Zwiększ wysokość obrazka o 20% */
+  object-fit: cover; /* Zachowanie proporcji i dopasowanie do ramki */
+  margin-bottom: 15px; /* Margines pod obrazkiem */
+  flex: 1; /* Zajmij dostępną przestrzeń */
+  margin-top: 10px;
+}
+
+button {
+  background-color: red; /* Kolor przycisku */
+  color: white; /* Kolor tekstu przycisku */
+  padding: 10px 20px; /* Margines w przycisku */
+  border: none; /* Usuń domyślną obwódkę */
+  cursor: pointer; /* Kursor po najechaniu */
+  transition: background-color 0.3s ease; /* Animacja zmiany koloru */
+  width: 100%; /* Szerokość przycisku na 100% szerokości boxa */
+  display: block; /* Zamień przycisk na element blokowy */
+  margin-top: auto; /* Przesuń przycisk na dół */
+}
+
+button:hover {
+  background-color: blue; /* Kolor przycisku po najechaniu */
+}
