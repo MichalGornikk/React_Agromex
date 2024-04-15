@@ -1,5 +1,8 @@
+/* Twój kod */
 .slider-container {
-  padding: 50px 0px 100px 0px;
+  padding: 70px 0px 70px 0px;
+  position: relative;
+  background-color: #d3d3d34b; /* Tło szare */
 }
 
 .slider-wrapper {
@@ -11,8 +14,9 @@
 }
 
 .slick-slide img {
-  max-width: 400px;
-  height: auto;
+  max-width: 100%;
+  width: auto;
+  max-height: 400px;
   margin: auto;
   display: block;
   background-size: cover;
@@ -26,14 +30,25 @@
   line-height: 0;
   position: absolute;
   top: 50%;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   transform: translate(0, -50%);
   z-index: 1;
   cursor: pointer;
-  background: transparent;
+  background: rgb(255, 0, 0); /* Kolor tła domyślny */
   border: none;
   outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000; /* Kolor strzałek */
+  transition: background-color 0.3s; /* Dodajemy efekt przejścia */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #3b02d8; /* Kolor tła po najechaniu myszką */
 }
 
 .slick-prev {
@@ -46,10 +61,8 @@
 
 .slick-prev:before,
 .slick-next:before {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
-  opacity: 0.75;
-  color: #ff0000; /* Kolor strzałek */
 }
 
 .slick-prev:before {
@@ -60,41 +73,41 @@
   content: "❯";
 }
 
-/* Style dla slick dots */
 .slick-dots {
   position: absolute;
-  bottom: 20px; /* Opuść kropki nieco w dół */
+  bottom: 10px; /* Obniżamy przyciski niżej */
   width: 100%;
   text-align: center;
 }
 
 .slick-dots li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 8px; /* Zwiększamy marginesy */
 }
 
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
   display: block;
-  width: 12px; /* Zmniejsz szerokość kropki */
-  height: 12px; /* Zmniejsz wysokość kropki */
+  width: 20px; /* Zwiększamy szerokość kwadratów */
+  height: 20px; /* Zwiększamy wysokość kwadratów */
   border: none;
-  background-color: transparent; /* Usuwamy kolor tła */
+  background-color: transparent;
   opacity: 0.75;
   cursor: pointer;
   outline: none;
 }
 
 .slick-dots li button::before {
-  content: ""; /* Dodajemy puste zawartości dla pseudoelementu */
+  content: "";
   display: block;
-  width: 12px; /* Ustawiamy szerokość na taką samą jak wysokość */
-  height: 12px; /* Ustawiamy wysokość */
-  background-color: #ffffff; /* Kolor kwadratu */
-  border-radius: 2px; /* Zaokrąglamy narożniki, jeśli chcemy */
+  width: 100%; /* Dostosowujemy szerokość kwadratów */
+  height: 100%; /* Dostosowujemy wysokość kwadratów */
+  background-color: #ff0000;
+  border-radius: 2px;
+  margin-top: 50px;
 }
 
 .slick-dots li.slick-active button::before {
-  background-color: #ff0000; /* Kolor aktywnej kropki */
+  background-color: #ff0000;
 }

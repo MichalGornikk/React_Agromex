@@ -1,109 +1,102 @@
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-      to top,
-      rgba(163, 163, 162, 0.363),
-      rgba(7, 58, 28, 0.788)
-    ),
-    url("images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-text {
-  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 750px; /* Pozostawiamy na środku poziomo */
+  transform: translate(-60%, -50%); /* Przesuwamy lekko w lewo */
   text-align: left;
-  flex-direction: column;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Ustawia tło na półprzezroczysty szary */
-  padding: 2rem; /* Dodaje margines wewnętrzny do boxa */
-  border-radius: 10px; /* Zaokrągla rogi boxa */
+  z-index: 1;
 }
 
-.hero-text h1 {
-  font-size: 100px;
-  font-weight: 700;
-  line-height: 0.9;
-  max-width: fit-content;
+.text-box {
+  transition: transform 0.3s ease; /* Dodaj animację dla płynnego przejścia */
 }
 
-.hero-text h1::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background-color: white;
-  margin-top: 0px;
+.text-box:hover {
+  transform: scale(1.03); /* Powiększ element o 3% */
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Przezroczysta, ciemnoszara tło */
+  padding: 3rem; /* Zwiększenie odstępów wewnątrz ramki */
+  border-radius: 20px; /* Zwiększenie zaokrąglenia ramki */
+}
+
+.text-box {
   position: relative;
-  left: 2;
-  width: 0;
-  animation: underline 3.6s ease-in-out infinite;
-}
-@keyframes underline {
-  from {
-    width: 40;
-  }
-  to {
-    width: 100%;
-  }
+  font-size: 24px;
+  overflow: hidden; /* Ukryj nadmiarowe teksty */
 }
 
-.hero-text p {
-  max-width: 700px;
-  /* margin-top: 15px; */
-  line-height: 1.5;
-  font-size: 20px;
-  font-weight: 600;
-}
-.hero-text h3 {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 1.5;
-  /* margin-top: 25px; */
-}
-
-/* @media (max-width: 850px) {
-  .hero-text h1 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 650px) {
-  .hero-text h1 {
-    font-size: 30px;
-    max-width: 400px;
-    margin: auto;
-  }
-  .hero-text p {
-    font-size: 14px;
-    margin: 15px auto 30px;
-  }
-
-  .hero url {
-    width: 30px;
-  }
-} */
-
-.gradient-hero {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(85, 85, 85, 1) 0%,
-    rgba(255, 255, 255, 0) 33%,
-    rgba(255, 255, 255, 0) 66%,
-    rgba(85, 85, 85, 0.13) 100%
-  );
+.text-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0) 0%,
+    rgba(233, 233, 233, 0.397) 100%
+  ); /* Gradient czerwony od przezroczystego do pełnego koloru */
+  animation: highlight 8s linear infinite; /* Animacja */
+}
+
+@keyframes highlight {
+  0% {
+    left: -100%; /* Przesunięcie gradientu w lewo poza obszar tekstu */
+  }
+  50% {
+    left: 100%; /* Przesunięcie gradientu w prawo poza obszar tekstu */
+  }
+  100% {
+    left: 100%; /* Powrót gradientu do początkowej pozycji */
+  }
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Wysokość gradientu */
+  background: linear-gradient(
+    to bottom,
+    rgba(143, 143, 143, 0) 10%,
+    /* Zaczyna się przezroczystym u dołu */ rgb(94, 94, 94) 100%
+      /* Kończy się czarnym kolorem na górze */
+  );
+}
+.text-box h1,
+.text-box h3,
+.text-box p {
+  color: #fff;
+  margin: 0;
+}
+
+.title {
+  font-size: 120px; /* Zwiększenie rozmiaru tytułu */
+}
+
+.subtitle {
+  font-size: 50px; /* Zwiększenie rozmiaru podtytułu */
+}
+
+.description {
+  font-size: 30px; /* Zwiększenie rozmiaru opisu */
 }
