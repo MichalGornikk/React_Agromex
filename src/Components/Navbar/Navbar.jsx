@@ -31,8 +31,8 @@ const Navbar = () => {
         <li className="nav-button">
           <a href="#">O FIRMIE</a>
         </li>
-        <li className="nav-button">
-          TRANSPORT I SPEDYCJA
+        <li className="nav-button custom-button">
+          TRANSPORT I SPEDYCJA ↓
           <ul className="dropdown-menu">
             <li>
               <a href="#">Tranposrt Krajowy</a>
@@ -45,8 +45,8 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
-        <li className="nav-button">
-          PRODUKCJA
+        <li className="nav-button custom-button">
+          PRODUKCJA ↓
           <ul className="dropdown-menu">
             <li>
               <a href="#">Maszyny rolnicze</a>

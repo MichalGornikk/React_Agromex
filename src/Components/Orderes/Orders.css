@@ -11,7 +11,7 @@
   box-sizing: border-box; /* Wlicz marginesy i padding do szerokości boxa */
   width: 360px; /* Zwiększ szerokość boxa o 20% */
   height: 450px; /* Zwiększ wysokość boxa, aby pomieścić więcej tekstu */
-  border: 1px solid #ccc; /* Dodaj domyślną obwódkę */
+  border: 1px solid #6d6d6d; /* Dodaj domyślną obwódkę */
   padding: 15px; /* Margines wewnątrz boxa */
   text-align: center; /* Wyśrodkowanie tekstu w boxie */
   display: flex; /* Ustaw box obrazka jako flexbox */

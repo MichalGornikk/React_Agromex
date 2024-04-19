@@ -1,39 +1,28 @@
-/* General styles */
-
-:root {
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-primary-100: hsl(205, 15%, 58%);
-  --clr-primary-400: hsl(0, 0%, 21%);
-  --clr-primary-800: hsl(0, 0%, 100%);
-  --clr-primary-900: hsl(218, 33%, 9%);
-}
-
 .box-scroll {
-  display: grid;
-  padding: 0 auto;
-  place-content: center;
+  display: flex; /* Enable flexbox for the container */
+  align-items: center; /* Center images vertically within the container */
+  justify-content: center; /* Center images horizontally within the container */
+
+  position: relative; /* Enable relative positioning */
 }
 
-.tag-list {
-  margin: 0;
-  padding-inline: 0;
-  list-style: none;
+.image-list {
+  display: flex; /* Arrange images in a row */
+  flex-direction: row; /* Explicitly set flex direction to row */
+  align-items: center; /* Center images vertically within the row */
+  justify-content: center; /* Center images horizontally within the row */
+  width: 100%; /* Set list width to 100% of its container */
+  margin: 0 auto; /* Center the list horizontally using auto margins */
 }
 
-/* Scroller styles */
-
-.scroller {
-  max-width: 1000px;
+.image-item {
+  flex: 0 0 auto; /* Allow images to shrink and grow as needed */
+  margin: 0.5rem; /* Add some margin between images */
+}
+ul {
+  list-style: none; /* Remove default list markers */
 }
 
-.scroller__inner {
-  padding-block: 1rem;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2rem;
-}
-
-.scroller__inner img {
-  width: 170px; /* Set width to 130px */
-  height: 150px; /* Set height to 130px */
+ul li::marker {
+  content: none; /* Hide markers for list items */
 }

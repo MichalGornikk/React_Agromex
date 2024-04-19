@@ -1,46 +1,28 @@
-import "./Partners.css";
-
-// const scrollers = document.querySelectorAll(".scroller");
-
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
-  // scrollers.forEach((scroller) => {
-  //   scroller.setAttribute("data-animated", true);
-  //   const scrollerInner = scroller.querySelector(".scroller__inner");
-  //   const scrollerContent = Array.from(scrollerInner.children);
-  //   scrollerContent.forEach((item) => {
-  //     const duplicatedItem = item.cloneNode(true);
-  //     duplicatedItem.setAttribute("aria-hidden", true);
-  //     scrollerInner.appendChild(duplicatedItem);
-  //   });
-  // });
-}
+import "./Partners.css"; // Import your CSS file
 
 const Partners = () => {
-  const Part = [
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
-    { image: "images/nestle.png", alt: "Logo TEST" },
+  const images = [
+    { image: "images/nestle.png", alt: "Logo TEST 1" },
+    { image: "images/nestle.png", alt: "Logo TEST 2" },
+    { image: "images/nestle.png", alt: "Logo TEST 3" },
+    // ... Add more image objects if needed
   ];
+
   return (
     <div className="box-scroll">
-      <div className="scroller" data-speed="fast">
-        <ul className="tag-list scroller__inner">
-          {Part.map((team) => (
-            <li key={team.image}>
-              <img src={team.image} alt={team.alt} height="200" />
-            </li>
-          ))}
-        </ul>
-      </div>
+      {" "}
+      {/* Container for the images */}
+      <ul className="image-list">
+        {" "}
+        {/* Use an unordered list for better accessibility */}
+        {images.map((image) => (
+          <li key={image.image} className="image-item">
+            {" "}
+            {/* Image item with styling */}
+            <img src={image.image} alt={image.alt} width="130" height="130" />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

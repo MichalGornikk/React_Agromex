@@ -1,90 +1,98 @@
-.footer-padding {
-  padding: 0rem 20rem;
+.footer {
+  background-color: #f0f0f0;
+  padding: 15px;
 }
 
-.footer-box {
-  background-color: rgb(255, 255, 255);
-}
-
-.footer-section {
+.footer-content {
   display: flex;
-  flex-direction: column;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
+  padding-left: 300px;
   align-items: flex-start;
-  flex-wrap: wrap;
-  text-align: left;
-  margin-bottom: 2rem;
 }
 
-.footer-links-div {
-  width: 150px; /* Poprawiono literówkę */
-  margin: 1rem;
-  color: rgb(12, 12, 12);
-}
-
-.footer-box a:hover {
-  color: rgba(255, 0, 0, 0.705);
-  text-decoration: none;
-}
-
-.socialmedia {
+.footer-row {
   display: flex;
   flex-direction: row;
-  padding-top: 1rem; /* Dostosowano odstęp */
+  justify-content: space-between;
+  align-items: center; /* Wyśrodkuj zawartość w pionie */
+  width: 100%;
 }
 
-.socialmedia img {
-  width: 20px; /* Dostosowano szerokość ikon */
-  margin-right: 1rem; /* Dodałem odstęp między ikonami */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-links-div h4 {
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 0.9rem;
+.footer-logo {
+  margin-bottom: 20px;
 }
 
-.footer-links-div,
-.footer-links-div h4,
-.footer-links-div p {
-  font-family: "Open Sans";
-}
-.footer-links-div p {
-  font-size: 15px;
-  line-height: 15px;
-  margin: 0.5rem 0;
-  cursor: pointer;
+.footer-logo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
-/* Media Query */
-
-@media screen and (max-width: 850px) {
-  .footer-heding h1 {
-    /* Poprawiono literówkę */
-    font-size: 44px;
-    line-height: 50px;
-  }
+.footer-logo-info img {
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width: 550px) {
-  .footer-heding h1 {
-    /* Poprawiono literówkę */
-    font-size: 34px;
-    line-height: 42px;
-  }
-  .footer-links-div {
-    margin: 1rem 0; /* Dostosowano margines dla mniejszych ekranów */
-  }
+.footer-company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+.footer-company-info p {
+  padding-bottom: 5px;
+  font-size: 17px;
 }
 
-@media screen and (max-width: 400px) {
-  .footer-heding h1 {
-    /* Poprawiono literówkę */
-    font-size: 27px;
-    line-height: 38px;
-  }
+.footer-navigation ul {
+  list-style: none;
+  padding: 50px 50px 0px 300px;
+  margin: 0;
+  font-size: 17px;
+}
+
+.footer-navigation li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.footer-navigation a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-navigation a {
+  text-decoration: none; /* Remove default underline */
+  display: inline-block; /* Allow for positioning */
+  position: relative; /* Enable positioning for the line */
+  padding-bottom: 2px; /* Add space for the line */
+}
+
+.footer-navigation a::after {
+  /* Pseudo-element for the line */
+  content: ""; /* Empty content */
+  position: absolute; /* Position the line absolutely */
+  bottom: -3px; /* Place the line under the text */
+  left: 0; /* Start from left */
+  width: 0; /* Initially no width */
+  height: 2px; /* Line height */
+  background-color: #007bff; /* Blue color */
+  transition: width 0.5s ease; /* Transition for width */
+}
+
+.footer-navigation a:hover::after {
+  width: 100%; /* Extend the line to full width */
+}
+
+.footer-navigation a:hover {
+  color: rgb(0, 4, 255);
 }
