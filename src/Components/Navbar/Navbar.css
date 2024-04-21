@@ -36,7 +36,6 @@ nav ul li {
   left: 0;
   width: 0; /* Początkowa szerokość linii */
   height: 100px;
-
   transition: height 0.5s ease-in-out, background-color 1s ease; /* Dodane płynne przejście */
 }
 
@@ -64,8 +63,8 @@ nav ul li {
 .nav-button {
   position: relative;
   cursor: pointer;
+  width: 100% auto;
 }
-
 .nav-button::after {
   content: "";
   position: absolute;
@@ -91,7 +90,8 @@ nav ul li {
   background-color: #cecece;
   display: none;
   z-index: 10;
-  border-radius: 5%;
+  padding: 10% 15%;
+  border-radius: 4%;
 }
 
 .nav-button:hover .dropdown-menu {
@@ -103,8 +103,8 @@ nav ul li {
 }
 
 .dropdown-menu li {
-  padding: 16px;
-  border-bottom: 2px solid #3d3d3dd2;
+  padding: 13px;
+  border-bottom: none;
   margin-left: 0;
   padding-left: 0;
 }
@@ -116,15 +116,42 @@ nav ul li {
 .dropdown-menu li a {
   color: #000000;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .dropdown-menu li:hover {
-  background-color: #8d8d8d; /* Lighter gray on hover */
+  background-color: #868686; /* Lighter gray on hover */
   border-radius: 10px;
+  padding-left: 2%;
   width: 100%;
+  white-space: nowrap;
 }
+
 .dropdown-menu li:hover a {
   color: #ffffff; /* Inny kolor dla tekstu */
+  white-space: nowrap;
+  max-width: 50px;
+}
+.dropdown-menu li a::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) scaleX(0); /* Zmiana scaleX(0) dla ukrycia strzałki */
+  font-size: 22px;
+  color: #5d00ffd2;
+  transition: transform 0.3s ease; /* Zmiana animacji na transform */
+}
+
+.dropdown-menu li:hover a::after {
+  transform: translateY(-50%) scaleX(1); /* Powiększanie strzałki w poziomie */
+}
+.dropdown-menu li a::after {
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Dodaj animację przejścia */
+}
+.dropdown-menu li:hover a::after {
+  opacity: 1; /* Wyświetl strzałkę po najechaniu */
 }
 
 .nav-button.custom-button {

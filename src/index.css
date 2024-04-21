@@ -56,6 +56,9 @@ a {
   justify-content: center;
 }
 
+.page {
+  margin-top: 80px;
+}
 /* @media (max-width: 1200px) {
   .container {
     padding-left: 5%;

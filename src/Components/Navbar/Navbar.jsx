@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let logo = "images/logo.png";
@@ -26,7 +27,7 @@ const Navbar = () => {
       <div></div>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li className="nav-button">
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className="nav-button">
           <a href="#">O FIRMIE</a>
@@ -37,9 +38,13 @@ const Navbar = () => {
             <li>
               <a href="#">Tranposrt Krajowy</a>
             </li>
+            <hr />
+
             <li>
               <a href="#">Transport</a>
             </li>
+            <hr />
+
             <li>
               <a href="#">Obsługa Celna</a>
             </li>
@@ -51,9 +56,12 @@ const Navbar = () => {
             <li>
               <a href="#">Maszyny rolnicze</a>
             </li>
+            <hr />
             <li>
               <a href="#">Konstrukcje stalowe</a>
             </li>
+            <hr />
+
             <li>
               <a href="#">Inne </a>
             </li>
@@ -61,7 +69,7 @@ const Navbar = () => {
         </li>
         <li className="nav-button">STREFA KLIENTA</li>
         <li className="nav-button">
-          <a href="#">KARIERA</a>
+          <Link to="/career">Kariera</Link>
         </li>
         <li className="nav-button">
           <a href="#">FAQ</a>
