@@ -10,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 810 ? setSticky(true) : setSticky(false);
+      window.scrollY > 300 ? setSticky(true) : setSticky(false);
     });
   }, []);
 
@@ -27,13 +27,13 @@ const Navbar = () => {
       <div></div>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li className="nav-button">
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li className="nav-button">
-          <a href="#">O FIRMIE</a>
+          <Link to="/company">O NAS</Link>
         </li>
         <li className="nav-button custom-button">
-          TRANSPORT I SPEDYCJA ↓
+          <Link to="/transport">TRANSPORT I SPEDYCJA ↓</Link>
           <ul className="dropdown-menu">
             <li>
               <a href="#">Tranposrt Krajowy</a>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li className="nav-button custom-button">
-          PRODUKCJA ↓
+          <Link to="/produce">PRODUKCJA ↓</Link>
           <ul className="dropdown-menu">
             <li>
               <a href="#">Maszyny rolnicze</a>
@@ -67,15 +67,17 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
-        <li className="nav-button">STREFA KLIENTA</li>
         <li className="nav-button">
-          <Link to="/career">Kariera</Link>
+          <Link to="/clientzone">STREFA KLIENTA</Link>
         </li>
         <li className="nav-button">
-          <a href="#">FAQ</a>
+          <Link to="/career">KARIERA</Link>
         </li>
         <li className="nav-button">
-          <a href="#">KONTAKT</a>
+          <Link to="/faq">FAQ</Link>
+        </li>
+        <li className="nav-button">
+          <Link to="/contact">Kontakt</Link>
         </li>
       </ul>
       <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
