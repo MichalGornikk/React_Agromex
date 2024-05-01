@@ -3,7 +3,7 @@ const Contact = () => {
   return (
     <div className="box-contact">
       <div className="text-container">
-        <h1>Skontaktuj się i zacznijmy współpracę</h1>
+        <h1>Zacznijmy wspólprace!</h1>
       </div>
       <div className="button-container">
         <button className="contact-button">Skontaktuj się</button>

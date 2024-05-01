@@ -2,7 +2,6 @@
 .slider-container {
   padding: 70px 0px 70px 0px;
   position: relative;
-  background-color: #d3d3d34b; /* Tło szare */
 }
 
 .slider-wrapper {
@@ -35,20 +34,19 @@
   transform: translate(0, -50%);
   z-index: 1;
   cursor: pointer;
-  background: rgb(255, 0, 0); /* Kolor tła domyślny */
+
   border: none;
   outline: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000; /* Kolor strzałek */
-  transition: background-color 0.3s; /* Dodajemy efekt przejścia */
+  color: #000;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background: #3b02d8; /* Kolor tła po najechaniu myszką */
+  background: #3b02d8;
 }
 
 .slick-prev {
@@ -66,31 +64,33 @@
 }
 
 .slick-prev:before {
+  color: rgb(0, 0, 0);
   content: "❮";
 }
 
 .slick-next:before {
   content: "❯";
+  color: rgb(0, 0, 0);
 }
 
 .slick-dots {
   position: absolute;
-  bottom: 10px; /* Obniżamy przyciski niżej */
+  bottom: 10px;
   width: 100%;
   text-align: center;
 }
 
 .slick-dots li {
   display: inline-block;
-  margin: 0 8px; /* Zwiększamy marginesy */
+  margin: 0 8px;
 }
 
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
   display: block;
-  width: 20px; /* Zwiększamy szerokość kwadratów */
-  height: 20px; /* Zwiększamy wysokość kwadratów */
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: transparent;
   opacity: 0.75;
@@ -101,13 +101,9 @@
 .slick-dots li button::before {
   content: "";
   display: block;
-  width: 100%; /* Dostosowujemy szerokość kwadratów */
-  height: 100%; /* Dostosowujemy wysokość kwadratów */
+  width: 100%;
+  height: 100%;
   background-color: #ff0000;
   border-radius: 2px;
   margin-top: 50px;
-}
-
-.slick-dots li.slick-active button::before {
-  background-color: #ff0000;
 }

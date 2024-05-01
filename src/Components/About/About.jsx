@@ -4,13 +4,14 @@ const About = () => {
   return (
     <div>
       <ul className="grid">
+        <h1 className="title-line">
+          <span>STWÓRZ</span>
+        </h1>
         <li className="line">
-          <img src="images/about.jpg" alt="Image 1 Description" />{" "}
-          {/* Update with your image source and alt text */}
+          <img src="images/magazyn.jpg" alt="Image 1 Description" />
           <div className="text">
             <h3>CENTRUM LOGISTYCZNE I USŁUGI SPEDYCYJNE</h3>
             <p>
-              {" "}
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
               hic! Repellendus quae qui repellat placeat assumenda mollitia nam
               adipisci velit ad numquam similique deleniti quisquam porro
@@ -31,13 +32,14 @@ const About = () => {
             <button className="btn-about">Czytaj więcej</button>
           </div>
         </li>
+        <h1 className="title-line">
+          <span>Z NAMI</span>
+        </h1>
         <li className="line">
-          <img src="images/about.jpg" alt="Image 2 Description" />{" "}
-          {/* Update with your image source and alt text */}
+          <img src="images/client.jpg" alt="Image 2 Description" />
           <div className="text">
             <h3>SPEDYCJA KRAJOWA I MIĘDZYNARODOWA</h3>
             <p>
-              {" "}
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
               hic! Repellendus quae qui repellat placeat assumenda mollitia nam
               adipisci velit ad numquam similique deleniti quisquam porro
@@ -58,9 +60,11 @@ const About = () => {
             <button className="btn-about">Sprawdź usługi</button>
           </div>
         </li>
+        <h1 className="title-line">
+          <span>PRZYSZŁOŚĆ</span>
+        </h1>
         <li className="line">
-          <img src="images/about.jpg" alt="Image 3 Description" />{" "}
-          {/* Update with your image source and alt text */}
+          <img src="images/zaladunek.jpg" alt="Image 3 Description" />
           <div className="text">
             <h3>WSPÓŁPRACA Z NAMI</h3>
             <p>

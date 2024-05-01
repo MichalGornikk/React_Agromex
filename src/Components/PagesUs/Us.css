@@ -1,0 +1,144 @@
+.timeline-body {
+  margin: 0;
+  padding: 5% 20% 10% 20%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container {
+  padding: 10px 30px;
+  position: relative;
+  width: 50%;
+  animation: movedown 6s linear forwards;
+  opacity: 0;
+}
+/* animaton */
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.timeline-container:nth-child(1) {
+  animation-delay: 0s;
+}
+.timeline-container:nth-child(2) {
+  animation-delay: 1s;
+}
+.timeline-container:nth-child(3) {
+  animation-delay: 2s;
+}
+.timeline-container:nth-child(4) {
+  animation-delay: 3s;
+}
+.timeline-container:nth-child(5) {
+  animation-delay: 4s;
+}
+.timeline-container:nth-child(6) {
+  animation-delay: 5s;
+}
+.timeline-container:nth-child(7) {
+  animation-delay: 6s;
+}
+.timeline-container:nth-child(8) {
+  animation-delay: 7s;
+}
+.timeline-container:nth-child(9) {
+  animation-delay: 8s;
+}
+.timeline-container:nth-child(10) {
+  animation-delay: 9s;
+}
+/* animaton */
+
+.text-box-timeline {
+  padding: 20px 30px;
+  background: #748fb1;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 0px 0px 10px 0px #1f1f1f;
+}
+
+.life-timneline {
+  left: 0;
+}
+.right-timeline {
+  left: 50%;
+}
+.timeline-container > img {
+  position: absolute;
+  width: 30px;
+  border-radius: 50%;
+  right: -20px;
+  top: 55px;
+  z-index: 1;
+}
+
+.right-timeline img {
+  left: -20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #4c4d46;
+  top: 0;
+  left: 50%;
+
+  margin-left: -3px;
+  z-index: 0;
+  animation: moveline 3s linear forwards;
+}
+/* animaton */
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+/* animaton */
+
+.text-box-timeline h2 {
+  font-weight: 600;
+}
+.text-box-timeline small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgba(195, 199, 137, 0.705);
+  right: -15px;
+}
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid rgba(195, 199, 137, 0.705);
+  left: -15px;
+}

@@ -10,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 300 ? setSticky(true) : setSticky(false);
+      window.scrollY > 50 ? setSticky(true) : setSticky(false);
     });
   }, []);
 
@@ -30,7 +30,7 @@ const Navbar = () => {
           <Link to="/">HOME</Link>
         </li>
         <li className="nav-button">
-          <Link to="/company">O NAS</Link>
+          <Link to="/company">O FIRMIE</Link>
         </li>
         <li className="nav-button custom-button">
           <Link to="/transport">TRANSPORT I SPEDYCJA ↓</Link>
@@ -67,9 +67,7 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
-        <li className="nav-button">
-          <Link to="/clientzone">STREFA KLIENTA</Link>
-        </li>
+
         <li className="nav-button">
           <Link to="/career">KARIERA</Link>
         </li>

@@ -1,9 +1,9 @@
-import Hero from "/src/Components/Hero/Hero";
+import Us from "../Components/PagesUs/Us";
 
 const Company = () => {
   return (
     <div className="page">
-      <Hero />
+      <Us />
     </div>
   );
 };

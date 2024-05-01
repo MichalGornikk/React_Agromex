@@ -1,7 +1,9 @@
+import Question from "../Components/PagesQuestion/Question";
+
 const Faq = () => {
   return (
     <div className="page">
-      <h1>FAQ</h1>
+      <Question />
     </div>
   );
 };

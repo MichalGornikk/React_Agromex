@@ -40,9 +40,7 @@ const Footer = () => {
               <li>
                 <a href="/produkcja">Produkcja</a>
               </li>
-              <li>
-                <a href="/strefa-klienta">Strefa Klienta</a>
-              </li>
+
               <li>
                 <a href="/kariera">Kariera</a>
               </li>

@@ -5,7 +5,6 @@ const Careerr = () => {
       <p>
         Tutaj możesz dowiedzieć się więcej o ofertach pracy w naszej firmie.
       </p>
-      {/* Dodaj więcej treści tutaj */}
     </div>
   );
 };

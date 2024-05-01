@@ -9,8 +9,9 @@ import Clientzone from "./Pages/Clientzone";
 import Produce from "./Pages/Produce";
 import Company from "./Pages/Company";
 import Transport from "./Pages/Transport";
-import Faq from "./Pages/Faq";
+
 import Contact from "./Pages/Contact";
+import Faq from "./Pages/Faq";
 
 const App = () => {
   return (
