@@ -1,9 +1,5 @@
 const Produce = () => {
-  return (
-    <div className="page">
-      <h1>Produkcja</h1>
-    </div>
-  );
+  return <div className="page"></div>;
 };
 
 export default Produce;

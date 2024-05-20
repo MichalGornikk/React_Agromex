@@ -36,17 +36,17 @@ const Navbar = () => {
           <Link to="/transport">TRANSPORT I SPEDYCJA ↓</Link>
           <ul className="dropdown-menu">
             <li>
-              <a href="#">Tranposrt Krajowy</a>
+              <Link to="/transport">Transport Krajowy</Link>
             </li>
             <hr />
 
             <li>
-              <a href="#">Transport</a>
+              <Link to="/transport">Transport</Link>
             </li>
             <hr />
 
             <li>
-              <a href="#">Obsługa Celna</a>
+              <Link to="/transport">Obsługa Celna</Link>
             </li>
           </ul>
         </li>

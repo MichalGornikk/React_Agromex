@@ -1,0 +1,23 @@
+.fleet-container {
+  text-align: center;
+  padding: 50px;
+}
+.blue {
+  color: #41b3e6; /* Ustawia kolor tekstu na niebieski */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.fleet-description {
+  margin-bottom: 30px;
+}
+
+.fleet-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.fleet-images img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

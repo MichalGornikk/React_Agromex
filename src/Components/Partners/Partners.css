@@ -1,28 +1,18 @@
-.box-scroll {
-  display: flex; /* Enable flexbox for the container */
-  align-items: center; /* Center images vertically within the container */
-  justify-content: center; /* Center images horizontally within the container */
-
-  position: relative; /* Enable relative positioning */
+/* partners.css */
+.partners-container {
+  text-align: center;
+  margin: 30px;
+  padding: 0px 150px 0px 150px;
 }
 
-.image-list {
-  display: flex; /* Arrange images in a row */
-  flex-direction: row; /* Explicitly set flex direction to row */
-  align-items: center; /* Center images vertically within the row */
-  justify-content: center; /* Center images horizontally within the row */
-  width: 100%; /* Set list width to 100% of its container */
-  margin: 0 auto; /* Center the list horizontally using auto margins */
+.partners-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
 }
 
-.image-item {
-  flex: 0 0 auto; /* Allow images to shrink and grow as needed */
-  margin: 0.5rem; /* Add some margin between images */
-}
-ul {
-  list-style: none; /* Remove default list markers */
-}
-
-ul li::marker {
-  content: none; /* Hide markers for list items */
+.partner-image {
+  width: 100px;
+  height: 100px;
 }

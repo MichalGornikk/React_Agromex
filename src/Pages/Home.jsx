@@ -4,7 +4,7 @@ import Partners from "/src/Components/Partners/Partners";
 import Contact from "/src/Components/Contact/Contact";
 import Orders from "/src/Components/Orderes/Orders";
 import Photos from "/src/Components/Photos/Photos";
-import Title from "/src/Components/Title/Title";
+import Fleet from "../Components/Fleet/Fleet";
 
 const Home = () => {
   return (
@@ -15,8 +15,8 @@ const Home = () => {
         <About />
       </div>
       <Orders />
+      <Fleet />
       <Partners />
-      <Title />
       <Contact />
     </div>
   );

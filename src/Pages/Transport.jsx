@@ -1,7 +1,9 @@
+import PagesTransport from "../Components/PagesTransport/PagesTransport";
+
 const Transport = () => {
   return (
     <div className="page">
-      <h1>Transport</h1>
+      <PagesTransport />
     </div>
   );
 };

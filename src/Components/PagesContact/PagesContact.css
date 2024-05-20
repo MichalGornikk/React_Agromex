@@ -1,0 +1,28 @@
+.contact-box {
+  display: flex;
+  align-items: flex-start; /* Wyjustowanie elementów do góry */
+  padding: 5%;
+  border: 1px black solid;
+}
+
+.contact-text {
+  width: 50%;
+  text-align: center;
+  padding-top: 70px;
+  font-size: 17px;
+}
+
+.map-box {
+  width: 50%;
+  border: solid black 3px;
+}
+
+.map-box iframe {
+  width: 100%;
+}
+.contact-text h1,
+.contact-text h3,
+.contact-text p {
+  margin-bottom: 10px; /* Dodanie odstępu między poszczególnymi elementami tekstu */
+  margin-left: 00px;
+}

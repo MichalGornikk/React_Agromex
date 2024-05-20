@@ -1,0 +1,68 @@
+.ccarrer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.carrer-one {
+  width: 45%;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ff0000; /* Added border with light gray color */
+}
+
+.carrer-two {
+  width: 45%;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #4400ff; /* Added border with light gray color */
+}
+.carrer-one img {
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  margin-bottom: 10px;
+}
+.carrer-two img {
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  margin-bottom: 10px;
+}
+.carrer-two h3,
+.carrer-one h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.carrer-two p,
+.carrer-one p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.carrer-one button {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.carrer-two button {
+  background-color: #2f00ff;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.carrer-one button:hover {
+  background-color: #45a049;
+}
+.carrer-two button:hover {
+  background-color: #45a049;
+}

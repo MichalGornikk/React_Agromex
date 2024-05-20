@@ -7,7 +7,7 @@ const Hero = () => {
         <source src="images/intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="video-overlay"></div> {/* Gradient */}
+      <div className="video-overlay"></div>
       <div className="hero-text">
         <div className="text-box">
           <h1 className="title">AGROMEX</h1>

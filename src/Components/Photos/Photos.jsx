@@ -9,8 +9,6 @@ const slides = [
   "images/tir.jpg",
   "images/tir.jpg",
   "images/tir.jpg",
-
-  // Dodaj więcej zdjęć tutaj
 ];
 
 const SimpleSlider = () => {

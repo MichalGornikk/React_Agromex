@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Contact.css";
 const Contact = () => {
   return (
@@ -6,8 +8,9 @@ const Contact = () => {
         <h1>Zacznijmy wspólprace!</h1>
       </div>
       <div className="button-container">
-        <button className="contact-button">Skontaktuj się</button>
-        <button className="offer-button">Poznaj ofertę</button>
+        <Link to="/contact">
+          <button className="contact-button">DAJ NAM ZNAĆ</button>
+        </Link>
       </div>
     </div>
   );

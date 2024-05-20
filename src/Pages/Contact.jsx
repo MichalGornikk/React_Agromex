@@ -1,7 +1,9 @@
+import PagesContact from "../Components/PagesContact/PagesContact";
+
 const Contact = () => {
   return (
     <div className="page">
-      <h1>dzada</h1>
+      <PagesContact />
     </div>
   );
 };

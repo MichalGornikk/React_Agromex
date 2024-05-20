@@ -13,7 +13,7 @@
 .text-container {
   font-size: 10px;
   flex: 1;
-  padding: 22%;
+padding-left: 22%;
   color: rgb(255, 255, 255);
 }
 

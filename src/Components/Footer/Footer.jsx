@@ -2,6 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   const logo = "images/logo.png";
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -13,14 +14,13 @@ const Footer = () => {
             </div>
             <div className="footer-company-info">
               <p>Mariusz Szczęsniak i Ireneusz Szcześniak</p>
-              <p>Adres firmy: Łuków, Strzelnicza, 01-011</p>
-              <p>Telefon: +48 123 456 789</p>
-              <p>Telefon: +48 987 654 321</p>
-            </div>
-            <div className="footer-company-info">
-              <p>REGON: 1400000001</p>
-              <p>KRS: 0000001</p>
-              <p>NIP: PL123456789</p>
+              <p>Adres firmy: Strzelnicza 3, 21-400 Łuków</p>
+              <p>
+                Telefon: <a href="tel:+48123456789">+48 123 456 789</a>
+              </p>
+              <p>
+                Telefon: <a href="tel:+48123456789">+48 987 654 321</a>
+              </p>
             </div>
           </div>
         </div>
@@ -32,23 +32,39 @@ const Footer = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/o-firmie">O Firmie</a>
+                <a href="/company">O Firmie</a>
               </li>
               <li>
-                <a href="/transport-i-spedycja">Transport i Spedycja</a>
+                <a href="/transport">Transport i Spedycja</a>
               </li>
               <li>
-                <a href="/produkcja">Produkcja</a>
+                <a href="/produce">Produkcja</a>
               </li>
-
               <li>
-                <a href="/kariera">Kariera</a>
+                <a href="/career">Kariera</a>
               </li>
               <li>
                 <a href="/faq">FAQ</a>
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <div className="footer-social">
+          <a href="https://www.facebook.com" aria-label="Facebook">
+            <img src="images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.twitter.com" aria-label="X">
+            <img src="images/X-icon.png" alt="X" />
+          </a>
+          <a href="https://www.linkedin.com" aria-label="LinkedIn">
+            <img src="images/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+        </div>
+        <div className="footer-copyright">
+          <p>&copy; {year} Agromex. Wszystkie prawa zastrzeżone.</p>
         </div>
       </div>
     </footer>
