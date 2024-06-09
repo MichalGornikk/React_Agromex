@@ -1,109 +1,112 @@
+/* Question background */
 .Question-backgorund {
   width: 50%;
-  height: 1300px;
+  height: 1300px; /* Adjust height as needed */
   padding: 10px;
   display: flex;
   justify-content: center;
   margin: 5% 1% 1% 25%;
 }
 
+/* Question box */
 .Question-box {
-  margin: 0 40px;
   max-width: 700px;
   display: flex;
-
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
+/* Question title */
 .Question-box h1 {
-  color: #000000e1;
+  color: #333333; /* Dark gray text */
   padding-left: 24%;
+  padding-bottom: 50px;
 }
 
+/* Tab background */
 .Question-box .tab {
   position: relative;
-  background-color: #7090b8;
+  background-color: #e0e8f0; /* Light blue background */
   padding: 0 20px 20px;
-
-  box-shadow: 0 15px 25px
-    rgba(
-      rgb(255, 255, 255),
-      rgb(55, rgb(37, 37, 43) 55),
-      rgb(71, 71, 97),
-      alpha
-    );
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Hide radio button */
 .Question-box .tab > input {
   appearance: none;
 }
 
+/* Tab label */
 .Question-box .tab > label {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
+/* Plus sign icon */
 .Question-box .tab label::after {
   content: "+";
   position: absolute;
   right: 20px;
-  font-size: 2em;
-  color: rgb(122, 122, 122);
-  transition: transform 1s;
+  font-size: 1.2em;
+  color: #999999; /* Light gray icon */
+  transition: transform 0.3s;
 }
 
+/* Plus sign hover effect */
 .Question-box .tab:hover > label::after {
-  color: #3b0681;
+  color: #ff0000; /* Blue highlight */
 }
 
+/* Plus sign rotation on active tab */
 .Question-box .tab input:checked ~ label::after {
   transform: rotate(135deg);
 }
 
+/* Question number circle */
 .Question-box .tab label > h2 {
   width: 40px;
   height: 40px;
-  background: #006d21;
+  background: #41b3e6; /* Blue circle */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fdfdfd;
+  color: #fff; /* White text */
   font-size: 1.25em;
-
+  border-radius: 50%;
   margin-right: 13px;
 }
 
-/* .Question-box .tab input:checked ~ label h2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-end;
-  padding: 20px;
-} */
+/* Question title */
 .Question-box .tab label h3 {
   position: relative;
   font-weight: 600;
-  color: #000000;
+  color: #333333; /* Dark gray text */
   z-index: 1;
 }
 
+/* Content panel */
 .Question-box .tab .content {
   max-height: 0;
-  transition: 1s;
+  transition: max-height 0.3s ease;
   overflow: hidden;
 }
 
+/* Content panel on active tab */
 .Question-box .tab input:checked ~ .content {
   max-height: 100vh;
 }
 
+/* Content text */
 .Question-box .tab .content p {
   position: relative;
   padding: 17px 30px;
-  color: rgba(51, 51, 51, 0.938);
+  color: #333333; /* Dark gray text */
   z-index: 2;
+}
+
+/* Często zadawane pytania (Frequently Asked Questions) color change */
+.Question-box h1 span {
+  color: #41b3e6; /* Blue color for "Często zadawane pytania" */
 }

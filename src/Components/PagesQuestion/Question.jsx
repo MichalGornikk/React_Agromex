@@ -4,7 +4,9 @@ const Question = () => {
   return (
     <div className="Question-backgorund">
       <div className="Question-box">
-        <h1>Często zadawane pytania</h1>
+        <h1 className="joinus-title">
+          <span className="joinus-highlight-blue">Często</span> zadawane pytania
+        </h1>
         <div className="tab">
           <input type="radio" name="acc" id="acc1" />
           <label htmlFor="acc1">
@@ -124,7 +126,7 @@ const Question = () => {
               labore, atque nesciunt quo.
             </p>
           </div>
-        </div>{" "}
+        </div>
         <div className="tab">
           <input type="radio" name="acc" id="acc9" />
           <label htmlFor="acc9">

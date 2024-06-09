@@ -1,104 +1,116 @@
-import { useState, useEffect } from "react";
 import "./PagesTransport.css";
 
 const PagesTransport = () => {
-  const [modalsOpen, setModalsOpen] = useState([false, false, false]);
-
-  const openModal = (index) => {
-    const newModalsOpen = [...modalsOpen];
-    newModalsOpen[index] = true;
-    setModalsOpen(newModalsOpen);
-  };
-
-  const closeModal = (index) => {
-    const newModalsOpen = [...modalsOpen];
-    newModalsOpen[index] = false;
-    setModalsOpen(newModalsOpen);
-  };
-
-  useEffect(() => {
-    const handleEscapeKey = (event) => {
-      if (event.key === "Escape") {
-        setModalsOpen([false, false, false]);
-      }
-    };
-    document.addEventListener("keydown", handleEscapeKey);
-    return () => {
-      document.removeEventListener("keydown", handleEscapeKey);
-    };
-  }, []);
-
-  const handleOutsideClick = (event) => {
-    if (event.target.classList.contains("modal")) {
-      setModalsOpen([false, false, false]);
-    }
-  };
-
-  const modalContent = [
-    { header: "Nagłówek modala 1", content: "Treść modala 1" },
-    { header: "Nagłówek modala 2", content: "Treść modala 2" },
-    { header: "Nagłówek modala 3", content: "Treść modala 3" },
-  ];
-
   return (
-    <div className="container-transport">
+    <div className="transport-page">
       <section className="transport-section">
-        <div className="transport-content">
-          <h3 className="red-color">TRANSPORT KRAJOWY</h3>
-          <p>
-            text
-            <button onClick={() => openModal(0)}>SPRAWDŹ OFERTĘ</button>
-          </p>
+        <div className="section-content">
+          <h2 className="section-header">
+            <span className="first-word">Transport </span>
+            <span className="second-word">Międzynarodowy</span>
+          </h2>
+          <img
+            src="images/auto.jpg"
+            alt="Transport Międzynarodowy"
+            className="section-image"
+          />
+          <div className="section-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
+              sunt quam quo temporibus consequuntur ut cum labore quos. Esse
+              quae cupiditate sapiente perspiciatis reiciendis exercitationem,
+              harum in, incidunt laborum, quaerat excepturi cumque perferendis
+              nobis quisquam voluptatibus vero! Blanditiis nesciunt deserunt
+              reprehenderit, nemo magnam rem accusamus architecto maxime,
+              ducimus est animi molestias. Impedit perspiciatis ipsum, fugit
+              dolor eligendi laboriosam dolorem quasi quis omnis aspernatur
+              alias quae excepturi repellendus distinctio vitae corrupti rerum
+              aliquid, iusto harum minus autem molestias illum eos hic! Ducimus
+              id natus, dolores qui excepturi dignissimos voluptatibus nemo
+              reprehenderit quasi dolor. Tenetur eius quia nemo accusamus
+              aperiam totam illum sequi blanditiis error accusantium quod rerum,
+              consequuntur itaque veniam deleniti sed, exercitationem soluta
+              alias. Voluptatum animi omnis ipsum eaque officiis accusamus
+              temporibus quod illo facere nemo aliquid iusto, debitis magni
+              consequatur non obcaecati quia quaerat. Ratione quas voluptatum
+              accusamus porro? Inventore ea recusandae beatae voluptatum ab nisi
+              temporibus facere.
+            </p>
+          </div>
         </div>
-        <img
-          src="images/client.jpg"
-          alt="Zdjęcie 1"
-          className="transport-image-one"
-        />
       </section>
-
-      <section className="transport-section transport-section-reverse">
-        <img
-          src="images/kierowca.jpg"
-          alt="Zdjęcie 2"
-          className="transport-image-two"
-        />
-        <div className="transport-content">
-          <h3 className="blue-color">SPEDYCJA</h3>
-          <p>
-            text
-            <button onClick={() => openModal(1)}>SPRAWDŹ OFERTĘ</button>
-          </p>
-        </div>
-      </section>
-
       <section className="transport-section">
-        <div className="transport-content">
-          <h3 className="red-color">OBSŁUGA CELNA</h3>
-          <p>text</p>
-          <button onClick={() => openModal(2)}>SPRAWDŹ OFERTĘ</button>
+        <div className="section-content">
+          <h2 className="section-header">
+            <span className="first-word">Transport </span>
+            <span className="second-word">Krajowy</span>
+          </h2>
+          <img
+            src="images/delivery.jpg"
+            alt="Transport Krajowy"
+            className="section-image"
+          />
+          <div className="section-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
+              sunt quam quo temporibus consequuntur ut cum labore quos. Esse
+              quae cupiditate sapiente perspiciatis reiciendis exercitationem,
+              harum in, incidunt laborum, quaerat excepturi cumque perferendis
+              nobis quisquam voluptatibus vero! Blanditiis nesciunt deserunt
+              reprehenderit, nemo magnam rem accusamus architecto maxime,
+              ducimus est animi molestias. Impedit perspiciatis ipsum, fugit
+              dolor eligendi laboriosam dolorem quasi quis omnis aspernatur
+              alias quae excepturi repellendus distinctio vitae corrupti rerum
+              aliquid, iusto harum minus autem molestias illum eos hic! Ducimus
+              id natus, dolores qui excepturi dignissimos voluptatibus nemo
+              reprehenderit quasi dolor. Tenetur eius quia nemo accusamus
+              aperiam totam illum sequi blanditiis error accusantium quod rerum,
+              consequuntur itaque veniam deleniti sed, exercitationem soluta
+              alias. Voluptatum animi omnis ipsum eaque officiis accusamus
+              temporibus quod illo facere nemo aliquid iusto, debitis magni
+              consequatur non obcaecati quia quaerat. Ratione quas voluptatum
+              accusamus porro? Inventore ea recusandae beatae voluptatum ab nisi
+              temporibus facere.
+            </p>
+          </div>
         </div>
-        <img
-          src="images/magazyn.jpg"
-          alt="Zdjęcie 3"
-          className="transport-image-three"
-        />
       </section>
-
-      {modalsOpen.map(
-        (isOpen, index) =>
-          isOpen && (
-            <div key={index} className="modal" onClick={handleOutsideClick}>
-              <div className="modal-content">
-                <span className="close" onClick={() => closeModal(index)}>
-                  &times;
-                </span>
-                <h2>{modalContent[index].header}</h2>
-                <p>{modalContent[index].content}</p>
-              </div>
-            </div>
-          )
-      )}
+      <section className="transport-section">
+        <div className="section-content">
+          <h2 className="section-header">
+            <span className="first-word">Obsługa </span>
+            <span className="second-word">Celna</span>
+          </h2>
+          <img
+            src="images/custom-service.jpg"
+            alt="Obsługa Celna"
+            className="section-image"
+          />
+          <div className="section-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
+              sunt quam quo temporibus consequuntur ut cum labore quos. Esse
+              quae cupiditate sapiente perspiciatis reiciendis exercitationem,
+              harum in, incidunt laborum, quaerat excepturi cumque perferendis
+              nobis quisquam voluptatibus vero! Blanditiis nesciunt deserunt
+              reprehenderit, nemo magnam rem accusamus architecto maxime,
+              ducimus est animi molestias. Impedit perspiciatis ipsum, fugit
+              dolor eligendi laboriosam dolorem quasi quis omnis aspernatur
+              alias quae excepturi repellendus distinctio vitae corrupti rerum
+              aliquid, iusto harum minus autem molestias illum eos hic! Ducimus
+              id natus, dolores qui excepturi dignissimos voluptatibus nemo
+              reprehenderit quasi dolor. Tenetur eius quia nemo accusamus
+              aperiam totam illum sequi blanditiis error accusantium quod rerum,
+              consequuntur itaque veniam deleniti sed, exercitationem soluta
+              alias. Voluptatum animi omnis ipsum eaque officiis accusamus
+              temporibus quod illo facere nemo aliquid iusto, debitis magni
+              consequatur non obcaecati quia quaerat. Ratione quas voluptatum
+              accusamus porro? Inventore ea recusandae beatae voluptatum ab nisi
+              temporibus facere.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

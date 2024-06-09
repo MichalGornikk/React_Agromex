@@ -1,28 +1,22 @@
-.contact-box {
+.contact-container {
   display: flex;
-  align-items: flex-start; /* Wyjustowanie elementów do góry */
-  padding: 5%;
-  border: 1px black solid;
+  justify-content: center; /* Wyśrodkowanie wzdłuż osi x */
+  align-items: center; /* Wyśrodkowanie wzdłuż osi y */
 }
 
-.contact-text {
-  width: 50%;
-  text-align: center;
-  padding-top: 70px;
-  font-size: 17px;
+.contact-content {
+  flex: 1;
+}
+
+.contact-info {
+  margin-right: 20px; /* Dodanie odstępu między informacjami a mapą */
 }
 
 .map-box {
-  width: 50%;
-  border: solid black 3px;
+  flex: 1; /* Zajęcie pozostałego miejsca */
 }
 
 .map-box iframe {
   width: 100%;
-}
-.contact-text h1,
-.contact-text h3,
-.contact-text p {
-  margin-bottom: 10px; /* Dodanie odstępu między poszczególnymi elementami tekstu */
-  margin-left: 00px;
+  height: 100%; /* Wypełnienie całej przestrzeni map-box */
 }

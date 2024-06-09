@@ -5,8 +5,6 @@ import Footer from "/src/Components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-  // state = {  }
-
   return (
     <div>
       <Navbar className="navbar_up" />

@@ -54,13 +54,13 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-social">
           <a href="https://www.facebook.com" aria-label="Facebook">
-            <img src="images/facebook-icon.png" alt="Facebook" />
+            <img src="#" alt="Facebook" />
           </a>
           <a href="https://www.twitter.com" aria-label="X">
-            <img src="images/X-icon.png" alt="X" />
+            <img src="#" alt="X" />
           </a>
           <a href="https://www.linkedin.com" aria-label="LinkedIn">
-            <img src="images/linkedin-icon.png" alt="LinkedIn" />
+            <img src="#" alt="LinkedIn" />
           </a>
         </div>
         <div className="footer-copyright">
